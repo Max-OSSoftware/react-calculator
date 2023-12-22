@@ -1,17 +1,15 @@
 import React from "react";
 
 
-function Button({ label, onClick, id }) {
-    return (
-      <button
-        id={id}
-        className="bg-gray-200 p-6 rounded text-xl focus:outline-none focus:bg-gray-300 text-black"
-        onClick={onClick}
+// Button.jsx
+export default function Button({ id, label, onClick }) {
+  return (
+      <button 
+          id={id}
+          className="bg-gray-600 text-white p-4 rounded hover:bg-gray-500 active:bg-gray-700 focus:outline-none"
+          onClick={onClick}
       >
-        {label}
+          {label}
       </button>
-    );
-  }
-  
-  export default Button;
-  
+  );
+}

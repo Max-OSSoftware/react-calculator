@@ -1,6 +1,5 @@
 import React from 'react';
-import Calculator from './Calculator'; // Make sure the path is correct
-import './App.css'; // Assuming you have an App.css for general styles
+import Calculator from './Calculator'; 
 
 function App() {
   return (
