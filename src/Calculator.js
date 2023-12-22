@@ -85,11 +85,12 @@ const performCalculation = () => {
     if (operation && previousInput) {
       const result = calculate(previousInput, currentInput || '0', operation);
       setCurrentInput(result);
-      setExpression(result); // Update the expression to show the result
-      setPreviousInput('');
+      setPreviousInput(result);
       setOperation(null);
+      setExpression(result);
     }
   };
+  
   
   
 
