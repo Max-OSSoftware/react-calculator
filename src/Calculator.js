@@ -112,8 +112,9 @@ const performCalculation = () => {
 
   return (
     <div className="max-w-xs mx-auto my-10">
-   
+   <div id="display">
     <Display value={expression || '0'} />
+    </div>
 
     <div className="grid grid-cols-4 gap-2">
       {/* Number Buttons */}
