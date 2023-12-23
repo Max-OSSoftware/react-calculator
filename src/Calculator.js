@@ -27,30 +27,39 @@ function Calculator() {
   
     // Building the expression
     setDisplayValue((prevValue) => {
-      // Check if the last character is an operator
+      // Ensure prevValue is always defined
+      if (!prevValue) {
+        prevValue = '0';
+      }
+  
+      // Handling consecutive operators and decimal point
       const isLastCharOperator = ['+', '-', '*', '/'].includes(prevValue.slice(-1));
       const isSecondLastCharOperator = ['+', '*', '/'].includes(prevValue.slice(-2, -1));
   
-      // Handling consecutive operators
+      // Consecutive operators logic
       if (['+', '*', '/'].includes(value)) {
         if (isLastCharOperator) {
-          // Replace last operator or operator followed by a minus
           return isSecondLastCharOperator ? prevValue.slice(0, -2) + value : prevValue.slice(0, -1) + value;
         }
       } else if (value === '-' && ['+', '*', '/'].includes(prevValue.slice(-1))) {
-        // Allow negative sign after another operator
         return prevValue + value;
       }
   
-      // Preventing double decimals in a single number
-      if (value === '.' && prevValue.split(/[\+\-\*\/]/).pop().includes('.')) {
-        return prevValue;
+      // Decimal point logic
+      if (value === '.') {
+      const operands = prevValue.split(/[+\-*/]/);
+        const lastOperand = operands[operands.length - 1];
+  
+        if (lastOperand.includes('.')) {
+          return prevValue; // If last number has a decimal, don't add another
+        }
       }
   
       // Append the value
       return prevValue === '0' && value !== '.' ? value : prevValue + value;
     });
   };
+  
   
   
 
