@@ -1,11 +1,12 @@
 import React from "react";
 
 
-// Display.jsx
-export default function Display({ value }) {
+function Display({ value }) {
   return (
-      <div id="display" className="bg-gray-700 text-white text-2xl p-4 rounded mb-3">
-          {value}
-      </div>
+    <div id="display" className="bg-gray-100 p-6 rounded mb-2 text-right text-2xl text-white">
+      {value}
+    </div>
   );
 }
+
+export default Display;
