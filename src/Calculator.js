@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Button from './Button';
 import Display from './Display';
+import { evaluate } from 'mathjs';
+
 
 function Calculator() {
   const [displayValue, setDisplayValue] = useState('0');
@@ -12,30 +14,48 @@ function Calculator() {
       return;
     }
   
-    // Equals - here, we'll later implement safe evaluation
+    // Handle equals
     if (value === '=') {
-      // Temporary placeholder for evaluation logic
-      setDisplayValue('Result');
+      try {
+        const result = evaluate(displayValue);
+        setDisplayValue(result.toString());
+      } catch (error) {
+        setDisplayValue('Error');
+      }
       return;
     }
   
-    // Preventing multiple operators and decimal points
-    if ((value === '.' && displayValue.includes('.')) ||
-        (['+', '-', '*', '/'].includes(value) && ['+', '-', '*', '/'].includes(displayValue.slice(-1)))) {
-      return;
-    }
+    // Building the expression
+    setDisplayValue((prevValue) => {
+      // Check if the last character is an operator
+      const isLastCharOperator = ['+', '-', '*', '/'].includes(prevValue.slice(-1));
+      const isSecondLastCharOperator = ['+', '*', '/'].includes(prevValue.slice(-2, -1));
   
-    // Preventing leading zeros
-    if (displayValue === '0' && value === '0') {
-      return;
-    }
+      // Handling consecutive operators
+      if (['+', '*', '/'].includes(value)) {
+        if (isLastCharOperator) {
+          // Replace last operator or operator followed by a minus
+          return isSecondLastCharOperator ? prevValue.slice(0, -2) + value : prevValue.slice(0, -1) + value;
+        }
+      } else if (value === '-' && ['+', '*', '/'].includes(prevValue.slice(-1))) {
+        // Allow negative sign after another operator
+        return prevValue + value;
+      }
   
-    // Update displayValue
-    setDisplayValue((prevValue) => 
-      prevValue === '0' || ['+', '-', '*', '/', 'Result'].includes(prevValue) ? value : prevValue + value
-    );
+      // Preventing double decimals in a single number
+      if (value === '.' && prevValue.split(/[\+\-\*\/]/).pop().includes('.')) {
+        return prevValue;
+      }
+  
+      // Append the value
+      return prevValue === '0' && value !== '.' ? value : prevValue + value;
+    });
   };
   
+  
+
+
+  // calculator face starts here  
   
   return (
     <div className="max-w-xs mx-auto my-10">

@@ -1,48 +1,31 @@
-React Calculator
-Description
-My freecodecamp challenge 
-This project is a simple yet powerful calculator built using React. It features a user-friendly interface and supports basic arithmetic operations, including addition, subtraction, multiplication, division, and handling of decimal points. Designed with functionality and ease of use in mind, it's perfect for quick calculations.
-Features
+# React Calculator
 
-    Basic arithmetic operations: addition, subtraction, multiplication, division.
-    Supports decimal calculations.
-    Clear functionality to reset calculations.
-    Elegant and responsive user interface.
-    Error handling for invalid inputs and operations.
+## Description
 
-Getting Started
-Prerequisites
+This freecodecamp certification project is a calculator built using React.js and Tailwind CSS. It's designed to perform basic arithmetic operations like addition, subtraction, multiplication, and division. This calculator handles decimal inputs and can process a sequence of operations.
 
-    Node.js
-    npm (Node Package Manager)
+## Features
 
-Installation
+- Perform basic arithmetic operations (+, -, *, /)
+- Support for decimal calculations
+- Handling consecutive operators with correct precedence
+- Reset functionality to clear computations
+- Elegant design with responsive buttons and display
+- Passes all [freeCodeCamp](https://www.freecodecamp.org/) test cases for calculator functionality
 
-Clone the repository:
+## Technologies Used
 
+- React.js
+- Tailwind CSS
+- [math.js](https://mathjs.org/) for safe arithmetic operations
+- [freeCodeCamp Test Suite](https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js) for testing
 
-Navigate to the project directory:
+## Installation and Setup
 
+Clone the repository and run the following commands:
+
+```bash
+git clone https://github.com/your-username/react-calculator.git
 cd react-calculator
-
-Install dependencies:
-
 npm install
-
-Start the application:
-
 npm start
-
-Usage
-
-After starting the application, the calculator can be accessed through a web browser. Simply input numbers and select operations to perform calculations.
- I Built this Calculator With,
-
-    React - A JavaScript library for building user interfaces.
-    Tailwind CSS - A utility-first CSS framework for rapidly building custom designs.
-
-
-
-License
-
-Distributed under the MIT License. See LICENSE for more information
