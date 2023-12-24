@@ -1,5 +1,7 @@
 # React Calculator
 
+[Model](https://github.com/zapboy216/react-calculator/blob/main/public/images/Numina.jpg)
+
 ## Description
 
 This freecodecamp challenge for the certification project is a calculator built using React.js and Tailwind CSS. It's designed to perform basic arithmetic operations like addition, subtraction, multiplication, and division. This calculator handles decimal inputs and can process a sequence of operations.
