@@ -68,7 +68,7 @@ function Calculator() {
   // calculator face starts here, chose orbitron font for the display, zapboy216
   
   return (  <div>       
-    <h3 className="text-center text-4xl font-bold mb-4" style={{ fontFamily: 'Orbitron' }}>Calculator</h3>
+    <h3 className="text-center text-4xl font-bold mb-4" style={{ fontFamily: 'Orbitron' }}>Numina</h3>
     <div className="max-w-xs mx-auto my-10">
      <Display value={displayValue} />
 

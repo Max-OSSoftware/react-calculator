@@ -1,5 +1,6 @@
 import React from 'react';
 import Calculator from './Calculator'; 
+import Footer from './Footer.js';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
         <Calculator />
       </header>
+      <Footer />
     </div>
   );
 }
