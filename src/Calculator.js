@@ -65,9 +65,10 @@ function Calculator() {
   
 
 
-  // calculator face starts here  
+  // calculator face starts here, chose orbitron font for the display, zapboy216
   
-  return (
+  return (  <div>       
+    <h3 className="text-center text-4xl font-bold mb-4" style={{ fontFamily: 'Orbitron' }}>Calculator</h3>
     <div className="max-w-xs mx-auto my-10">
      <Display value={displayValue} />
 
@@ -93,7 +94,7 @@ function Calculator() {
 <Button id="decimal" label="." onClick={() => handleButtonClick('.')} />
 
 
-
+</div>
       </div>
     </div>
     // calculator face ends here
