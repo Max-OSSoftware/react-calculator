@@ -1,4 +1,4 @@
-# React Calculator
+# React Calculator Numina
 
 
 - ![Model](https://github.com/zapboy216/react-calculator/blob/main/public/images/Numina.jpg)
