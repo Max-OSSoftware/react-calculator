@@ -1,6 +1,7 @@
 # React Calculator
 
-[Model](https://github.com/zapboy216/react-calculator/blob/main/public/images/Numina.jpg)
+
+- ![Model](https://github.com/zapboy216/react-pomodoro-clock/blob/main/public/images/screenshot.jpg)
 
 ## Description
 
