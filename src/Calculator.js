@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Button from './Button';
 import Display from './Display';
 import { evaluate } from 'mathjs';
-
+ 
+//After much head banging I decided to implement mathjs to evaluate the expressions, made life easier,zapboy216
 
 function Calculator() {
   const [displayValue, setDisplayValue] = useState('0');
