@@ -2,7 +2,7 @@
 
 ## Description
 
-This freecodecamp certification project is a calculator built using React.js and Tailwind CSS. It's designed to perform basic arithmetic operations like addition, subtraction, multiplication, and division. This calculator handles decimal inputs and can process a sequence of operations.
+This freecodecamp challenge for the certification project is a calculator built using React.js and Tailwind CSS. It's designed to perform basic arithmetic operations like addition, subtraction, multiplication, and division. This calculator handles decimal inputs and can process a sequence of operations.
 
 ## Features
 
@@ -20,12 +20,4 @@ This freecodecamp certification project is a calculator built using React.js and
 - [math.js](https://mathjs.org/) for safe arithmetic operations
 - [freeCodeCamp Test Suite](https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js) for testing
 
-## Installation and Setup
 
-Clone the repository and run the following commands:
-
-```bash
-git clone https://github.com/your-username/react-calculator.git
-cd react-calculator
-npm install
-npm start
